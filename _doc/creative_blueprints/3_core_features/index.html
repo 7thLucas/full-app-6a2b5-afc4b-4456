@@ -1,0 +1,63 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10 gap-5">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-1">
+      <div class="text-xs font-bold tracking-widest uppercase text-slate-400">Core Features</div>
+      <h2 class="text-4xl font-black text-slate-900" style="letter-spacing: -0.02em;">Built for every kind of explorer.</h2>
+    </div>
+
+    <!-- Persona chips -->
+    <div class="flex flex-wrap gap-2">
+      <span class="px-4 py-1.5 rounded-full text-sm font-semibold bg-emerald-700 text-white shadow-sm">🌿 Forager</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600">🥾 Hiker</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600">🍳 Foodie</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-slate-100 text-slate-600">🔬 Hobbyist</span>
+    </div>
+
+    <!-- Feature cards -->
+    <div class="sl-grid grid gap-3 flex-1">
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-emerald-50 border border-emerald-100">
+        <div class="text-2xl">📸</div>
+        <div class="font-bold text-slate-900 text-sm">Photo Identification</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Upload a mushroom photo for instant AI species identification with a confidence level.</div>
+      </div>
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="text-2xl">💬</div>
+        <div class="font-bold text-slate-900 text-sm">Natural Language Chat</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Ask follow-up questions in plain language — no mycology jargon needed.</div>
+      </div>
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-red-50 border border-red-100">
+        <div class="text-2xl">🚦</div>
+        <div class="font-bold text-slate-900 text-sm">Safety Rating</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Clear edibility status: Safe / Caution / Toxic / Unknown — never ambiguous.</div>
+      </div>
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-amber-50 border border-amber-100">
+        <div class="text-2xl">🍄</div>
+        <div class="font-bold text-slate-900 text-sm">Species Profile</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Scientific name, habitat, season, and distinguishing features all in one card.</div>
+      </div>
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-orange-50 border border-orange-100">
+        <div class="text-2xl">⚠️</div>
+        <div class="font-bold text-slate-900 text-sm">Look-alike Warnings</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Flags dangerous species the mushroom could be confused with — critical for safety.</div>
+      </div>
+
+      <div class="flex flex-col gap-2 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="text-2xl">📋</div>
+        <div class="font-bold text-slate-900 text-sm">Identification History</div>
+        <div class="text-xs text-slate-600 leading-relaxed">Saved log of past identifications per session to review and learn from.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
