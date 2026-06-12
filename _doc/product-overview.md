@@ -1,7 +1,7 @@
 # Product Overview — MushroomAI
 
 ## Product Name
-**MushroomAI** *(working name — to be confirmed with founder)*
+**MushroomAI**
 
 ## Tagline
 *"Know before you eat."*
