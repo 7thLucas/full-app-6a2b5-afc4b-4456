@@ -1,40 +1,61 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 56%; }
+  .mode-portrait .sl-content { width: 100%; }
+  .mode-landscape .sl-visual { width: 44%; }
+  .mode-portrait .sl-visual { width: 100%; height: 34%; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#6D4C41;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#6D4C41; border-color:#6D4C4130;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="sl-layout flex h-full">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Mushroom Identification Challenge</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Wild mushroom identification is fraught with risk. Without expert knowledge, foragers face potential poisoning. Manual field guides are cumbersome, and misidentification can be fatal. Nature enthusiasts and mycologists need a fast, reliable way to identify species in the field.</p>
+    <!-- Left: Problem + Solution narrative -->
+    <div class="sl-content flex flex-col justify-center gap-7 p-12">
+
+      <!-- Eyebrow -->
+      <div class="text-xs font-bold tracking-widest uppercase text-slate-400">Foundation</div>
+
+      <!-- Problem block -->
+      <div class="flex flex-col gap-3 p-6 rounded-2xl bg-red-50 border border-red-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-red-500 flex-shrink-0"></div>
+          <span class="text-xs font-bold tracking-widest uppercase text-red-600">The Problem</span>
         </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#6D4C41;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#6D4C41;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Identifying wild mushrooms is dangerous without expert knowledge. Misidentification risks poisoning, while manual identification requires years of experience. Users need instant, reliable identification to safely forage or explore fungal biodiversity.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Foragers, hikers, mycologists, nature educators, gardeners</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Democratize mushroom expertise so anyone can safely explore and appreciate fungal biodiversity</p></div>
+        <h2 class="text-2xl font-black text-slate-900 leading-tight">Mushrooms kill — and they look alike.</h2>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          Thousands of poisonings occur every year because toxic and edible species are visually similar. Field guides require expert knowledge; online forums are slow and unreliable. Non-experts have no fast, trustworthy tool they can use in the field.
+        </p>
       </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">AI identification</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Mycology</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Safety</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Field guide</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Biodiversity</span></div>
-      <div class="mt-8"><data-attribution /></div>
+
+      <!-- Connector -->
+      <div class="flex items-center gap-3">
+        <div class="h-px flex-1 bg-slate-200"></div>
+        <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase">The fix ↓</span>
+        <div class="h-px flex-1 bg-slate-200"></div>
+      </div>
+
+      <!-- Solution block -->
+      <div class="flex flex-col gap-3 p-6 rounded-2xl bg-emerald-50 border border-emerald-200">
+        <div class="flex items-center gap-2.5">
+          <div class="w-2.5 h-2.5 rounded-full bg-emerald-600 flex-shrink-0"></div>
+          <span class="text-xs font-bold tracking-widest uppercase text-emerald-700">The Solution</span>
+        </div>
+        <h2 class="text-2xl font-black text-slate-900 leading-tight">An AI expert, always in your pocket.</h2>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          MushroomAI lets anyone photograph or describe a mushroom and receive instant identification — a clear safety rating, species profile, and look-alike warnings — through natural conversation, in seconds.
+        </p>
+      </div>
+
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=person+holding+mystery+mushroom+in+forest+uncertain+looking+confused&amp;keyspace=1tz20poh&amp;user_id=4456" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Right: Atmospheric visual -->
+    <div class="sl-visual relative overflow-hidden">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=Person%20standing%20in%20a%20lush%20green%20forest%20holding%20a%20wild%20mushroom%20in%20one%20hand%20and%20looking%20at%20a%20smartphone%20with%20a%20curious%20cautious%20expression%2C%20dappled%20soft%20natural%20light%2C%20photorealistic%20editorial%20style%2C%20earthy%20green%20and%20amber%20atmosphere"
+        alt="Forager in forest checking phone for mushroom identification"
+        class="w-full h-full object-cover"
+      />
     </div>
+
   </div>
 </section>
