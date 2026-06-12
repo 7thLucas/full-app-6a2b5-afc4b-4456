@@ -1,0 +1,94 @@
+<style>
+  .mode-landscape .sl-value-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-value-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10 gap-5">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+      <div class="flex items-center gap-3 flex-wrap">
+        <div class="text-xs font-bold tracking-widest uppercase text-slate-400">North Star Metric</div>
+        <span class="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">Projected impact — based on your inputs</span>
+      </div>
+      <h2 class="text-3xl font-black text-slate-900" style="letter-spacing: -0.02em;">Mushroom Identifications Completed / Week</h2>
+    </div>
+
+    <!-- Operation definition -->
+    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 flex-shrink-0">
+      <div class="text-xs font-bold tracking-widest uppercase text-slate-500 mb-1.5">Verified Operation Defined</div>
+      <p class="text-xs text-slate-700 leading-relaxed">
+        A <strong>Mushroom Identification Completed</strong> is counted when a user submits a photo or description <em>and</em> receives a complete AI result including species name, safety rating, and species profile. Clicks, page views, and incomplete chat sessions are excluded.
+      </p>
+    </div>
+
+    <!-- WVO Formula -->
+    <div class="flex flex-col gap-3 flex-shrink-0">
+      <div class="text-xs font-bold tracking-widest uppercase text-slate-400">Weekly Volume Formula</div>
+      <div class="flex flex-wrap items-center gap-3">
+
+        <div class="flex flex-col gap-1 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+          <div class="text-xs text-amber-700 font-semibold">Assumption — adjust this</div>
+          <div class="text-2xl font-black text-slate-900">150</div>
+          <div class="text-xs text-slate-600">weekly active users</div>
+        </div>
+
+        <span class="text-slate-400 text-2xl font-bold">×</span>
+
+        <div class="flex flex-col gap-1 p-3 rounded-xl bg-amber-50 border border-amber-200 text-center">
+          <div class="text-xs text-amber-700 font-semibold">Assumption — adjust this</div>
+          <div class="text-2xl font-black text-slate-900">3</div>
+          <div class="text-xs text-slate-600">identifications / user / week</div>
+        </div>
+
+        <span class="text-slate-400 text-2xl font-bold">=</span>
+
+        <div class="flex flex-col gap-1 p-3 rounded-xl bg-emerald-700 text-white text-center">
+          <div class="text-xs text-emerald-200 font-semibold">Weekly Operations</div>
+          <div class="text-2xl font-black">450</div>
+          <div class="text-xs text-emerald-100">verified identifications / week</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Value derivation -->
+    <div class="flex flex-col gap-3 flex-1">
+      <div class="text-xs font-bold tracking-widest uppercase text-slate-400">Value Derivation</div>
+
+      <div class="sl-value-grid grid gap-3">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-xs text-slate-500 font-semibold mb-1">Time saved / operation</div>
+          <div class="text-2xl font-black text-slate-900">~15 min</div>
+          <div class="text-xs text-slate-500 leading-relaxed">vs. field guide or forum lookup</div>
+          <div class="text-xs text-amber-600 mt-1.5 font-medium">Assumption — adjust this</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-xs text-slate-500 font-semibold mb-1">Value / operation</div>
+          <div class="text-2xl font-black text-slate-900">$5.00</div>
+          <div class="text-xs text-slate-500 leading-relaxed">15 min × $20/hr user time value</div>
+          <div class="text-xs text-amber-600 mt-1.5 font-medium">Assumption — adjust this</div>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+          <div class="text-xs text-emerald-700 font-semibold mb-1">Annual value</div>
+          <div class="text-2xl font-black text-slate-900">$117,000</div>
+          <div class="text-xs text-slate-500 leading-relaxed">450 ops × $5.00 × 52 wks</div>
+        </div>
+      </div>
+
+      <!-- Weekly + Annual callout -->
+      <div class="flex items-center justify-between gap-4 p-5 rounded-2xl bg-slate-900 text-white flex-shrink-0">
+        <div>
+          <div class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-0.5">Projected Weekly Value</div>
+          <div class="text-3xl font-black">$2,250 / week</div>
+          <div class="text-xs text-slate-400 mt-0.5">450 verified identifications × $5.00 per operation</div>
+        </div>
+        <div class="text-right flex-shrink-0">
+          <div class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-0.5">Projected Annual</div>
+          <div class="text-2xl font-black text-emerald-400">$117,000 / yr</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
