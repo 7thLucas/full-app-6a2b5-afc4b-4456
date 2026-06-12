@@ -1,0 +1,1 @@
+generate me an app for ai chat mushrom identifier
